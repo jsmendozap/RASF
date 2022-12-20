@@ -1,16 +1,27 @@
 #' @title plot_results
 #'
-#' @description Plot results from asf_search
+#' @description Plot results from asf_search.
 #'
-#' @param data A sf object which represent de area where search the selected
-#' ASF product.
+#' @param data A sf object which represent the area of interest.
 #'
-#' @param results sf object obtained form asf_search
+#' @param results A sf object obtained form asf_search.
 #'
-#' @example
+#' @examples
 #'
+#' \dontrun{
+#' library(sf)
 #'
-#' @export
+#' polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
+#'                 c(6.36, 6.36, 6.17, 6.17, 6.36)) %>%
+#'  {st_polygon(list(.))} %>%
+#'  st_sfc(crs = 4326)
+#'
+#' results <- asf_search(data = polygon, results = 20,
+#'  platform = 'ALOS', instrument = 'PALSAR')
+#'
+#' plot_results(data = polygon, results = results)
+#' }
+#'
 #' @importFrom dplyr "%>%"
 
 plot_results <- function(data, results){

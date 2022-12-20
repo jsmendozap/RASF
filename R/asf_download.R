@@ -1,22 +1,35 @@
 #' @title asf_download
 #'
-#' @description Downloads selected products from Alaska Satellite Facility
+#' @description Download selected products from Alaska Satellite Facility platform.
 #'
 #' @param results A data frame retrieve from asf_search function.
 #'
-#' @param id Row id for download product from data frame retrieved by
-#'  asf_search function.
+#' @param id Row number from selected product in data frame retrieved by
+#'  asf_search function for download.
 #'
-#' @param username user for Alaska Satellite Facility platform.
+#' @param user Username for Alaska Satellite Facility platform.
 #'
-#' @param password key for Alaska Satellite Facility platform.
+#' @param password Key for Alaska Satellite Facility platform.
 #'
-#' @return A data frame with available products for the selected area.
+#' @seealso https://search.asf.alaska.edu/
 #'
-#' @example
+#' @examples
 #'
+#'\dontrun{
+#' library(sf)
 #'
-#' @export
+#' polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
+#'                 c(6.36, 6.36, 6.17, 6.17, 6.36)) %>%
+#'  {st_polygon(list(.))} %>%
+#'  st_sfc(crs = 4326)
+#'
+#' results <- asf_search(data = polygon, results = 20,
+#'  platform = 'ALOS', instrument = 'PALSAR')
+#'
+#' asf_download(results = results, id = 12,
+#'  user = 'your_ASF_user', password = 'your_ASF_key')
+#'}
+#'
 #' @importFrom dplyr "%>%"
 
 asf_download <- function(results, id, user, password){
