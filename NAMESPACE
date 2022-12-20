@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+
+import(sf)
+import(tidyverse)
+import(httr)
+import(leaflet)
+
+importFrom("janitor", "clean_names")
