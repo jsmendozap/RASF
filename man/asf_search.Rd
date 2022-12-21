@@ -37,7 +37,7 @@ Retrieve a collection with available ASF products.
 library(sf)
 
 polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
-                c(6.36, 6.36, 6.17, 6.17, 6.36))
+                c(6.36, 6.36, 6.17, 6.17, 6.36)) \%>\%
  {st_polygon(list(.))} \%>\%
  st_sfc(crs = 4326)
 
