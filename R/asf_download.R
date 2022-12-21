@@ -13,6 +13,8 @@
 #'
 #' @seealso https://search.asf.alaska.edu/
 #'
+#' @export
+#'
 #' @examples
 #'
 #'\dontrun{
@@ -31,13 +33,14 @@
 #'}
 #'
 #' @importFrom dplyr "%>%"
+#' @importFrom rlang .data
 
 asf_download <- function(results, id, user, password){
 
   results %>%
     dplyr::filter({{ id }} == id) %>%
     dplyr::pull(url) %>%
-    httr::GET(httr::write_disk(path = basename(.), overwrite = T),
+    httr::GET(httr::write_disk(path = basename(.data), overwrite = T),
               httr::progress(),
               httr::authenticate(user = user,
                                  password = password))

@@ -6,6 +6,8 @@
 #'
 #' @param results A sf object obtained form asf_search.
 #'
+#' @export
+#'
 #' @examples
 #'
 #' \dontrun{
@@ -23,14 +25,15 @@
 #' }
 #'
 #' @importFrom dplyr "%>%"
+#' @importFrom rlang .data
 
 plot_results <- function(data, results){
 
   results <- results %>%
-    dplyr::mutate(label = paste0("Id: ", id, "<br>",
-                                 "Processing level: ", processing_level, "<br>",
-                                 "Acquisition date: ", acquisition_date, "<br>",
-                                 "Size (MB): ", size_mb))
+    dplyr::mutate(label = paste0("Id: ", .data$id, "<br>",
+                                 "Processing level: ", .data$processing_level, "<br>",
+                                 "Acquisition date: ", .data$acquisition_date, "<br>",
+                                 "Size (MB): ", .data$size_mb))
 
   map <- leaflet::leaflet() %>%
     leaflet::addTiles() %>%
