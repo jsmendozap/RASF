@@ -16,9 +16,7 @@ from search.}
 \item{platform}{A string specifying the ASF product for search. Available
 products are:
 
-ALOS, A3, AIRSAR, AS, ERS, ERS-1, E1, ERS-2, E2, JERS-1, J1, RADARSAT-1, R1,
-SEASAT, SS, S1, Sentinel, Sentinel-1, Sentinel-1A, SA, Sentinel-1B, SB,
-SIR-C, SMAP, SP, UAVSAR, UA}
+ALOS, JERS-1, RADARSAT-1, Sentinel, Sentinel-1, Sentinel-1A, Sentinel-1B, SMAP.}
 
 \item{instrument}{Default NULL. For some platforms, such as ALOS, there are
 multiple instruments to choose from.}
