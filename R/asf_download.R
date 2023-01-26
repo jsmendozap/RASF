@@ -11,6 +11,8 @@
 #'
 #' @param password Key for Alaska Satellite Facility platform.
 #'
+#' @param path Path where will be save the product downloaded.
+#'
 #' @return None. Function downloads ASF product selected to path especified.
 #'
 #' @seealso https://search.asf.alaska.edu/

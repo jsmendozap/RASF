@@ -19,7 +19,8 @@ Imports:
     leaflet,
     rlang,
     sf,
-    stringr
+    stringr,
+    readr
 Encoding: UTF-8
 Language: en-US
 RoxygenNote: 7.2.1

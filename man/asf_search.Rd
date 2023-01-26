@@ -31,8 +31,8 @@ Retrieve a collection with available ASF products.
 }
 \examples{
 
-\dontrun{
-library(sf)
+require(sf)
+require(readr)
 
 polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
                 c(6.36, 6.36, 6.17, 6.17, 6.36)) \%>\%
@@ -41,7 +41,6 @@ polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
 
 asf_search(data = polygon, results = 5,
            platform = 'ALOS', instrument = 'PALSAR')
-}
 
 }
 \seealso{

@@ -11,13 +11,15 @@ plot_results(data, results)
 
 \item{results}{A sf object obtained form asf_search.}
 }
+\value{
+None. Function produces a plot
+}
 \description{
 Plot results from asf_search.
 }
 \examples{
 
-\dontrun{
-library(sf)
+require(sf)
 
 polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
                 c(6.36, 6.36, 6.17, 6.17, 6.36)) \%>\%
@@ -28,6 +30,5 @@ results <- asf_search(data = polygon, results = 20,
  platform = 'ALOS', instrument = 'PALSAR')
 
 plot_results(data = polygon, results = results)
-}
 
 }

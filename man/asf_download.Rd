@@ -4,7 +4,7 @@
 \alias{asf_download}
 \title{asf_download}
 \usage{
-asf_download(results, id, user, password)
+asf_download(results, id, user, password, path = NULL)
 }
 \arguments{
 \item{results}{A data frame retrieve from asf_search function.}
@@ -15,6 +15,11 @@ asf_search function for download.}
 \item{user}{Username for Alaska Satellite Facility platform.}
 
 \item{password}{Key for Alaska Satellite Facility platform.}
+
+\item{path}{Path where will be save the product downloaded.}
+}
+\value{
+None. Function downloads ASF product selected to path especified.
 }
 \description{
 Download selected products from Alaska Satellite Facility platform.
