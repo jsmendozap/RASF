@@ -9,7 +9,7 @@ asf_download(results, id, user, password, path = NULL)
 \arguments{
 \item{results}{A data frame retrieve from asf_search function.}
 
-\item{id}{Row number from selected product in data frame retrieved by
+\item{id}{Row number to download from data frame retrieved by
 asf_search function for download.}
 
 \item{user}{Username for Alaska Satellite Facility platform.}

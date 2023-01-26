@@ -30,7 +30,8 @@
 plot_results <- function(data, results){
 
   results <- results %>%
-    dplyr::mutate(label = paste0("Id: ", .data$id, "<br>",
+    dplyr::mutate(id = dplyr::row_number(),
+                  label = paste0("Id: ", .data$id, "<br>",
                                  "Processing level: ", .data$processing_level, "<br>",
                                  "Acquisition date: ", .data$acquisition_date, "<br>",
                                  "Size (MB): ", .data$size_mb))

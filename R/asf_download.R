@@ -4,7 +4,7 @@
 #'
 #' @param results A data frame retrieve from asf_search function.
 #'
-#' @param id Row number from selected product in data frame retrieved by
+#' @param id Row number to download from data frame retrieved by
 #'  asf_search function for download.
 #'
 #' @param user Username for Alaska Satellite Facility platform.
@@ -37,11 +37,11 @@
 #'}
 #'
 #' @importFrom dplyr "%>%"
-#' @importFrom rlang .data
 
 asf_download <- function(results, id, user, password, path = NULL){
 
   url <- results %>%
+    dplyr::mutate(ID = dplyr::row_number()) %>%
     dplyr::filter(ID == id) %>%
     dplyr::pull(url)
 
