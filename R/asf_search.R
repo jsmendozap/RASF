@@ -24,8 +24,7 @@
 #'
 #' @examples
 #'
-#' \dontrun{
-#' library(sf)
+#' require(sf)
 #'
 #' polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
 #'                 c(6.36, 6.36, 6.17, 6.17, 6.36)) %>%
@@ -34,7 +33,6 @@
 #'
 #' asf_search(data = polygon, results = 5,
 #'            platform = 'ALOS', instrument = 'PALSAR')
-#' }
 #'
 #' @seealso https://docs.asf.alaska.edu/api/keywords/
 #'

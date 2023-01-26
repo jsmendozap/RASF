@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R: 
     person(given = "Juan", family = "Mendoza",
            email = "jsmendozap@unal.edu.co", role = c("aut", "cre"))
-Description: Functions for search, visualize and download products hosted in
+Description: Search, visualization and download products hosted in
     Alaska Satellite Facility Distributed Active Archive Center (<https://docs.asf.alaska.edu/api/basics/>).
 License: GPL-3
 URL: https://github.com/jsmendozap/RASF

@@ -11,6 +11,8 @@
 #'
 #' @param password Key for Alaska Satellite Facility platform.
 #'
+#' @return None. Function downloads ASF product selected to path especified.
+#'
 #' @seealso https://search.asf.alaska.edu/
 #'
 #' @export
@@ -35,13 +37,19 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom rlang .data
 
-asf_download <- function(results, id, user, password){
+asf_download <- function(results, id, user, password, path = NULL){
 
-  results %>%
+  url <- results %>%
     dplyr::filter({{ id }} == id) %>%
-    dplyr::pull(url) %>%
-    httr::GET(httr::write_disk(path = basename(.data), overwrite = T),
-              httr::progress(),
-              httr::authenticate(user = user,
-                                 password = password))
+    dplyr::pull(url)
+
+  filepath <- ifelse(is.null(path),
+                     file.path(getwd(), basename(url)),
+                     file.path(path, basename(url)))
+
+  httr::GET(url, httr::write_disk(path = filepath, overwrite = T),
+            httr::progress(),
+            httr::authenticate(user = user,
+                               password = password))
+
 }

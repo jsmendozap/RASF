@@ -6,12 +6,13 @@
 #'
 #' @param results A sf object obtained form asf_search.
 #'
+#' @return None. Function produces a plot
+#'
 #' @export
 #'
 #' @examples
 #'
-#' \dontrun{
-#' library(sf)
+#' require(sf)
 #'
 #' polygon <- cbind(c(-75.63, -75.49, -75.49, -75.63, -75.63),
 #'                 c(6.36, 6.36, 6.17, 6.17, 6.36)) %>%
@@ -22,7 +23,6 @@
 #'  platform = 'ALOS', instrument = 'PALSAR')
 #'
 #' plot_results(data = polygon, results = results)
-#' }
 #'
 #' @importFrom dplyr "%>%"
 #' @importFrom rlang .data
