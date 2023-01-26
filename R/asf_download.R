@@ -42,7 +42,7 @@
 asf_download <- function(results, id, user, password, path = NULL){
 
   url <- results %>%
-    dplyr::filter({{ id }} == id) %>%
+    dplyr::filter(ID == id) %>%
     dplyr::pull(url)
 
   filepath <- ifelse(is.null(path),

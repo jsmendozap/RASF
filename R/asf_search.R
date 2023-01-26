@@ -67,8 +67,8 @@ asf_search <- function(data, results = 25, platform, instrument = NULL, start = 
                   y4 = 'Far Start Lat', x4 = 'Far Start Lon') %>%
     dplyr::mutate(geom = stringr::str_glue("POLYGON (({x1} {y1}, {x2} {y2}, {x3} {y3}, {x4} {y4}, {x1} {y1}))")) %>%
     sf::st_as_sf(wkt = "geom", crs = 4326) %>%
-    dplyr::mutate(id = dplyr::row_number()) %>%
-    dplyr::select(.data$id, dplyr::contains('URL'), 'Acquisition Date', 'Processing Level', 'Size (MB)') %>%
+    dplyr::mutate(ID = dplyr::row_number()) %>%
+    dplyr::select(.data$ID, dplyr::contains('URL'), 'Acquisition Date', 'Processing Level', 'Size (MB)') %>%
     janitor::clean_names()
 
   return(result)
