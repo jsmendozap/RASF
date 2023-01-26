@@ -19,7 +19,7 @@ asf_search function for download.}
 \item{path}{Path where will be save the product downloaded.}
 }
 \value{
-None. Function downloads ASF product selected to path especified.
+None. Function downloads ASF product selected to specified path.
 }
 \description{
 Download selected products from Alaska Satellite Facility platform.

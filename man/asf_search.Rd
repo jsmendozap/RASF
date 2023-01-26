@@ -7,7 +7,7 @@
 asf_search(data, results = 25, platform, instrument = NULL, start = NULL)
 }
 \arguments{
-\item{data}{A sf object which represent de area where search the selected
+\item{data}{A sf object which represent the area where search the selected
 ASF product.}
 
 \item{results}{An integer, specifying the maximum number of results returned

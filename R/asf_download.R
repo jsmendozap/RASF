@@ -13,7 +13,7 @@
 #'
 #' @param path Path where will be save the product downloaded.
 #'
-#' @return None. Function downloads ASF product selected to path especified.
+#' @return None. Function downloads ASF product selected to specified path.
 #'
 #' @seealso https://search.asf.alaska.edu/
 #'

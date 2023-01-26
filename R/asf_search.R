@@ -2,7 +2,7 @@
 #'
 #' @description Retrieve a collection with available ASF products.
 #'
-#' @param data A sf object which represent de area where search the selected
+#' @param data A sf object which represent the area where search the selected
 #' ASF product.
 #'
 #' @param results An integer, specifying the maximum number of results returned
